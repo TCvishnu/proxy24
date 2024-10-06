@@ -1,6 +1,13 @@
 import npyscreen
 from create_gameroom import start_game
 from join_gameroom import join_game
+from timeralso import QuizApp
+
+questions = [
+    {"question": "What is 2+2?", "answer": "4"},
+    {"question": "What is the capital of France?", "answer": "Paris"},
+    {"question": "What color is the sky?", "answer": "Blue"}
+]
 
 class GameRoomApp(npyscreen.NPSAppManaged):
     def onStart(self):
@@ -42,8 +49,10 @@ class UsernameForm(npyscreen.ActionForm):
         print(game_id)
 
         if join_game(game_id, player2_name):
-            npyscreen.notify_confirm(f"Successfully joined game room {game_id} as {player2_name}!", title="Success")
-            self.parentApp.switchForm("MAIN")  # Switch back to the main form or another appropriate form
+            # npyscreen.notify_confirm(f"Successfully joined game room {game_id} as {player2_name}!", title="Success")
+            # self.parentApp.switchForm("MAIN")  # Switch back to the main form or another appropriate form
+            quiz_app = QuizApp(questions, 1, game_id)
+            quiz_app.run()
         else:
             npyscreen.notify_confirm(f"Failed to join game room {game_id}.", title="Error")
 
@@ -76,6 +85,11 @@ class PlayerForm(npyscreen.Form):
         
         self.gameRoomID_display.value = f"Game Room ID: {game_id}"
         self.display()  # Update the screen to show the Game Room ID
+        
+    
+    # Switch to the quiz app
+        quiz_app = QuizApp(questions, 0, game_id)
+        quiz_app.run()
 
     def go_back(self):
         self.parentApp.switchForm("MAIN")

@@ -45,9 +45,18 @@ Make sure you have Python 3.x installed on your system. You can download it from
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/speed-typing-multiplayer.git
-   cd speed-typing-multiplayer
+   git clone https://github.com/TCvishnu/proxy24.git
 
 2. **Start playing the game**:
   ```bash
     python center.py
+```
+
+## Contributors
+
+- **Vishnu TC**
+- **K. Govind**
+- **Abhinand Nandakumar**
+- **Shreya Jayaraj**
+
+

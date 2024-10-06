@@ -14,7 +14,7 @@ data = {
 
 
 doc_ref = db.collection('DB').document('ggg')
-doc_ref.set(data)  # Use set instead of add to specify document ID
+doc_ref.set(data) 
 
 print("Document added to Firestore successfully.")
 

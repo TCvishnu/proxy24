@@ -65,7 +65,7 @@ class MainForm(npyscreen.ActionForm):
     def create(self):
         y, x = self.useable_space()
         center_x = int((x - 20) / 2)
-        center_y = int(y / 3)
+        center_y = int(y / 3) 
 
         self.create_button = self.add(npyscreen.ButtonPress, name="Create a Game Room", when_pressed_function=self.create_game_room, relx=center_x, rely=center_y)
         self.join_button = self.add(npyscreen.ButtonPress, name="Join a Game Room", when_pressed_function=self.join_game_room, relx=center_x, rely=center_y + 2)

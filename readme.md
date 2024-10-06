@@ -17,8 +17,6 @@ Welcome to the **Multiplayer Speed Typing and Quiz Game**, a fun and interactive
 
 - **Firebase**: Player data, including scores and game stats, are stored and managed using Firebase’s real-time database. Firebase ensures that game results are synced efficiently, even when multiple players are competing at once.
 
-- **Socket Programming**: Python’s `socket` module is used to manage communication between the server and multiple players. This enables the real-time multiplayer experience.
-
 ## Getting Started
 
 ### Prerequisites
@@ -55,7 +53,7 @@ Make sure you have Python 3.x installed on your system. You can download it from
 ## Contributors
 
 - **Vishnu TC**
-- **K. Govind**
+- **K Govind**
 - **Abhinand Nandakumar**
 - **Shreya Jayaraj**
 

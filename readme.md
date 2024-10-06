@@ -29,3 +29,25 @@ To run the project, you'll need to install a few dependencies:
 2. **Firebase SDK**: Install Firebase Admin SDK for Python.
    ```bash
    pip install firebase-admin
+3. **npyscreen:** Install the npyscreen library for building command-line UIs
+   ```bash
+   pip install npyscreen
+
+## Installation Instructions
+
+To set up the project and install the required dependencies, follow these steps:
+
+### Prerequisites
+
+Make sure you have Python 3.x installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+
+### Clone the Repository
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/speed-typing-multiplayer.git
+   cd speed-typing-multiplayer
+
+2. **Start playing the game**:
+  ```bash
+    python center.py

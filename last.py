@@ -3,7 +3,7 @@ from create_gameroom import start_game
 from join_gameroom import join_game
 from timeralso import QuizApp
 from increment_score_player2 import update_player2_score
-
+from typing import SpeedTrackingApp
 questions = [
     {"question": "What is 2+2?", "answer": "4"},
     {"question": "What is the capital of France?", "answer": "Paris"},
@@ -25,12 +25,18 @@ class MainForm(npyscreen.ActionForm):
 
         self.create_button = self.add(npyscreen.ButtonPress, name="Create a Game Room", when_pressed_function=self.create_game_room, relx=center_x, rely=center_y)
         self.join_button = self.add(npyscreen.ButtonPress, name="Join a Game Room", when_pressed_function=self.join_game_room, relx=center_x, rely=center_y + 2)
+        self.typing_test_button = self.add(npyscreen.ButtonPress, name="Start Typing Test", when_pressed_function=self.start_typing_test, relx=center_x, rely=center_y + 4)
 
     def create_game_room(self):
         self.parentApp.switchForm("PLAYER")
 
     def join_game_room(self):
         self.parentApp.switchForm("USERNAME")
+    
+    def start_typing_test(self):
+        typeApp = SpeedTrackingApp()
+        typeApp.run()
+
 
 class UsernameForm(npyscreen.ActionForm):
     def create(self):
